@@ -82,9 +82,9 @@ public class PolicyService  {
             premium += ageToPremium(policy, ageDaughter);
             premium += ageToPremium(policy, ageSpouse);
 
-            policyDTOList.get(i).setPremium1(premium);
-            policyDTOList.get(i).setPremium2(premium * 1.2F);
-            policyDTOList.get(i).setPremium3(premium * 1.4F);
+            policyDTOList.get(i).setPremiumUpto18(premium);
+            policyDTOList.get(i).setPremiumUpto45(premium * 1.2F);
+            policyDTOList.get(i).setPremiumUpto60(premium * 1.4F);
 
         }
         return policyDTOList;
@@ -129,5 +129,11 @@ public class PolicyService  {
             return "Location has been successfully added";
         }
 
+    }
+
+    public void addPolicy(PolicyDTO policyDTO) {
+        Policy p =new Policy();
+        modelMapper.map(policyDTO,p);
+        policyRepository.save(p);
     }
 }

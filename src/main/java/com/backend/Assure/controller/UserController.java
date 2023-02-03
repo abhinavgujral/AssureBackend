@@ -25,7 +25,7 @@ public String test(){
     return "hello";
 }
     @GetMapping("/user/{userId}")
-    @ApiOperation(value = "Get data by id", response = Data.class)
+  //  @ApiOperation(value = "Get data by id", response = Data.class)
     public ResponseEntity<String> getUserName(@PathVariable Long userId) {
         String userName = userService.getUserName(userId);
         return new ResponseEntity<>(userName, HttpStatus.FOUND);
@@ -48,22 +48,6 @@ public String test(){
         return new ResponseEntity(userId, HttpStatus.OK);
     }
 
-    // Deleting phone-otp relation
-//    @PostMapping("/user/phoneotp")
-//    public ResponseEntity removePhoneOTP(@RequestBody UserDTO userDTO){
-////        userService.removePhoneOTP(userDTO);
-//
-//        return new ResponseEntity(HttpStatus.OK);
-//    }
 
-//    @Bean
-//    public WebMvcConfigurer configurer(){
-//        return new WebMvcConfigurer() {
-//            @Override
-//            public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/*").allowedOrigins("*");
-//            }
-//        };
-//    }
 
 }

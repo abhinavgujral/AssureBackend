@@ -119,3 +119,26 @@ public class Policy {
         hospitals.add(hospital);
     }
 }
+/*
+{
+   "policyId"                 : 123,
+   "policyName"               : "Bajaj",
+   "roomRentLimit"            : "500000",
+   "claimBonus"               : 120.0f,
+   "pedWaitingPeriod"         : "1 year", //waiting period of pre-existing-disease cover
+   "copayPercent"             : 60.0f,
+   "isCriticalIllnessCovered" : true,
+   "isMaternityCovered"       : true,
+   "isRestorationBenefitsCovered"  :true,
+   "premiumUpto18"                 : 10000.0f,
+   "premiumUpto45"                 :15000f,
+   "premiumUpto60"                 :20000f,
+   "premiumBeyond60"               :25000f,
+   "coverAmount1"                  :500000.0f,
+   "coverAmount2"                  :500000.0f,
+   "coverAmount3"                  :500000.0f,
+   "tenure1"                       : 5,
+   "tenure2"                       : 5,
+   "tenure3"                       : 5
+ }
+ */

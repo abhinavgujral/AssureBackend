@@ -22,6 +22,14 @@ public class PolicyController {
 //    @GetMapping("/policy/{policyId}")
 //    public ResponseEntity<>
 
+
+       @PostMapping("/add/policy")
+     public ResponseEntity<PolicyDTO> addPolicy(@RequestBody PolicyDTO policyDTO){
+           System.out.println("Hello onside policy");
+         policyService.addPolicy(policyDTO);
+         return new ResponseEntity<>(policyDTO,HttpStatus.CREATED);
+     }
+
     @PostMapping("/explore/policies")
     public ResponseEntity<List<PolicyDTO>> getPolicies(@RequestBody AgeDTO ages) {
         List<PolicyDTO> policyDTOList = policyService.getPolicies(ages);
